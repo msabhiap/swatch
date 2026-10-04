@@ -1,0 +1,111 @@
+    /* ============ RESET ============ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #9aa5b1;
+      margin-bottom: 28px;
+    }
+
+    /* ============ THE GRID (this is the key CSS) ============ */
+    .palette {
+      display: grid;
+      /* 3 columns, each taking equal space */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;              /* space BETWEEN the boxes */
+      margin-bottom: 28px;
+    }
+
+    .swatch {
+      height: 140px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 10px;
+      font-size: 14px;
+      font-family: monospace;
+      color: #000;
+      /* transition makes hover smooth */
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    /* hover = when mouse is over it */
+    .swatch:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ============ OUTPUT + BUTTONS ============ */
+    .output {
+      background: #0f0f1a;
+      border: 1px solid #33334d;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 20px;
+      font-family: monospace;
+      font-size: 20px;
+      letter-spacing: 1px;
+      min-height: 58px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      transition: opacity 0.15s ease;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    .btn-primary {
+      background: #4f8cff;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #2c2c3e;
+      color: #fff;
+    }
