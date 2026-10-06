@@ -1,0 +1,19 @@
+.cell{
+  height:100px;
+  width:25%;
+  border:1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gameboard{
+  display: flex;
+  flex-wrap: wrap;
+  width:500px;
+}
+.board{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

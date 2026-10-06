@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f3f5fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  padding: 32px 20px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at top left, rgb(99 102 241 / 12%), transparent 38rem),
+    #f3f5fb;
+}
+
+.app {
+  width: min(100%, 540px);
+  padding: 36px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px 12px;
+  background: #fff;
+  border: 1px solid #e7eaf2;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgb(28 39 70 / 12%);
+}
+
+.app h1 {
+  grid-column: 1 / -1;
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: clamp(1.65rem, 5vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.app > input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  color: #172033;
+  background: #f8f9fc;
+  border: 1px solid #dce1ec;
+  border-radius: 12px;
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.app > input::placeholder {
+  color: #8992a5;
+}
+
+.app > input:focus {
+  outline: none;
+  background: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgb(99 102 241 / 14%);
+}
+
+.app > .add {
+  padding: 0 20px;
+  color: #fff;
+  background: #5855e7;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.app > .add:hover {
+  background: #4743d2;
+}
+
+.app > .add:active {
+  transform: translateY(1px);
+}
+
+.app > .add:focus-visible,
+.list button:focus-visible,
+.list input[type="checkbox"]:focus-visible {
+  outline: 3px solid rgb(99 102 241 / 45%);
+  outline-offset: 2px;
+}
+
+#searchInput {
+  grid-column: 1 / -1;
+}
+
+.list {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 4px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.list > li {
+  min-width: 0;
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #303a50;
+  background: #f8f9fc;
+  border: 1px solid #edf0f6;
+  border-radius: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.list > li:not(.renderList) {
+  justify-content: center;
+  color: #7c869a;
+  font-size: 0.95rem;
+}
+
+.list button {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  color: #4d55c7;
+  background: #eeefff;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.list button:hover {
+  color: #3936b5;
+  background: #e2e3ff;
+}
+
+.list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-left: auto;
+  accent-color: #5855e7;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 14px;
+  }
+
+  .app {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .app > .add {
+    padding: 0 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
