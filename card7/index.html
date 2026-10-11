@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-template-areas: "navbar navbar navbar navbar"
+  "sidebar sidebar sidebar"
+  "main "
+  "logo details"
+  ;
+}
+
+
+  </style>
+</head>
+<body>
+ <div class="container">
+  <div class="navbar">
+    <a  class="home" href="http://">Home</a>
+    <a  class ="contact"href="http://">contact</a>
+    <a  class="About"href="http://Log">About US</a>
+    <button class="login">LogIn</button>
+  </div>
+
+  <div class="sidebar">
+    <h1 class="role">Role</h1>
+    <h1 class="profile">Role</h1>
+    <h1 class="Details">Role</h1>
+  </div>
+    <div class="main">
+  <p class="containt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum accusantium repellat iusto rem enim </p>
+  </div>
+<div class="footer"> 
+  <a  class="logo"href="http://">Logo</a>
+  <h1 class="details">Details</h1>
+</div>
+ </div>
+  
+</body>
+</html>

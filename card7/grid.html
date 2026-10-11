@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      border:2px solid black;
+      display: grid;
+    grid-template-areas: "nav nav nav"
+    "side atricles article"
+    "footer footer footer";
+
+       
+    }
+ 
+  .item-1{
+    grid-area: nav;
+  }
+ .item-2{
+    grid-area: side;
+  }
+ .item-3{
+    grid-area: atricles;
+  }
+ .item-4{
+    grid-area: article;
+  }
+   .item-5{
+    grid-area: footer;
+  }
+.items {
+  padding: 20px;
+  background: lightblue;
+  border: 1px solid blue;
+}
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items item-1">
+        <div class="nav-item">Home</div>
+      <div class="nav-item">About</div>
+      <div class="nav-item">Contact</div>
+    </div>
+    <div class="items item-2">item2</div>
+    <div class="items item-3">item3 </div>
+    <div class="items item-4">item4</div>
+    <div class="items item-5">item5</div>
+  </div>
+</body>
+</html>
